@@ -155,8 +155,8 @@ button:focus {
 }
 
 .logo {
-  height: 1.4em !important;
-  width: 2.5em !important;
+  height: 4em !important;
+  width: 7em !important;
 }
 
 .navbar-nav .nav-link {
@@ -208,41 +208,10 @@ button:focus {
 /* --------- */
 /* Home section */
 /* --------- */
-*.wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.1s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
-  display: inline-block;
-} 
 
 
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  } /* Reset for the last half to pause */
-  100% {
-    transform: rotate(0deg);
-  }
-}
+
+
 #tsparticles {
   position: fixed !important;
   background-repeat: no-repeat !important;
@@ -261,7 +230,8 @@ button:focus {
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
-  padding-bottom: 30px !important;
+  background-size: cover;
+ padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
 
@@ -749,4 +719,64 @@ button:focus {
 
 .left-align {
   text-align: left;
+}
+.home-about-section {
+  padding: 60px 0;
+}
+
+.home-about-description {
+  margin-bottom: 50px;
+}
+
+.purple {
+  color: #6c63ff;
+}
+
+.team-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.img-container {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.team-card .card-body {
+  text-align: center;
+}
+.img-container {
+  overflow: hidden;
+}
+
+.img-container .rounded-circle {
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-container:hover .rounded-circle {
+  transform: scale(1.1);
+}
+
+.zoom {
+  display: inline-block;
+  position: relative;
+}
+
+.zoom img {
+  transition: transform 0.5s ease;
+}
+
+.zoom:hover img {
+  transform: scale(1.2);
 }
